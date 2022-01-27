@@ -1,6 +1,6 @@
 import { Box, Button, Text } from "@chakra-ui/react";
 
-const NotSupportedNetwork = ({ network, switchNetwork }) => {
+const NotSupportedNetwork = ({ switchNetwork }) => {
   return (
     <Box
       display="flex"

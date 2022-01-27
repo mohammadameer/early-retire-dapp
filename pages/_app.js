@@ -1,6 +1,5 @@
 import { ChakraProvider } from "@chakra-ui/react";
-import { providers } from "ethers";
-import { InjectedConnector, Provider, defaultChains, chain } from "wagmi";
+import { InjectedConnector, Provider, defaultChains } from "wagmi";
 import "../styles/globals.css";
 
 const bscTestnetChain = {
@@ -19,11 +18,8 @@ const bscTestnetChain = {
 };
 
 const chains = [bscTestnetChain, ...defaultChains];
-const defaultChain = bscTestnetChain;
 
 const connectors = () => [new InjectedConnector({ chains })];
-
-const isChainSupported = (chainId) => chains.some((x) => x.id === chainId);
 
 // const provider = ({ chainId }) =>
 //   providers.getDefaultProvider(

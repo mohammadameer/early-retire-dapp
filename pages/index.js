@@ -1,4 +1,4 @@
-import { Box, Text } from "@chakra-ui/react";
+import { Box } from "@chakra-ui/react";
 import Head from "next/head";
 import { useContract, useNetwork, useSigner } from "wagmi";
 
@@ -6,7 +6,6 @@ import { useContract, useNetwork, useSigner } from "wagmi";
 import Header from "../components/Header";
 
 import EarlyRetireABI from "../ABIs/EarlyRetireABI.json";
-import { useEffect } from "react";
 import Body from "../components/Body";
 import NotSupportedNetwork from "../components/NotSupportedNetwork";
 
