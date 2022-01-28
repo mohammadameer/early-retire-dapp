@@ -88,7 +88,7 @@ const Body = ({ contract }) => {
             borderColor="blackAlpha.600"
             mr={20}
           >
-            <Text fontSize="xl">All Investments</Text>
+            <Text fontSize="xl">Contract Balance</Text>
             <Text>{allInvestments}</Text>
           </Box>
         </Box>
