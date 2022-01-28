@@ -94,7 +94,7 @@ const Body = ({ contract }) => {
         </Box>
       </Box>
 
-      <Text fontSize="4xl" fontWeight="bold" textAlign="center" mt={40}>
+      <Text fontSize="4xl" fontWeight="bold" textAlign="center" mt={10}>
         Earn 0.50% Daily Forever
       </Text>
 
