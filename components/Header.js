@@ -3,8 +3,7 @@ import { useAccount, useConnect } from "wagmi";
 import { FaSignOutAlt as SignOutIcon } from "react-icons/fa";
 
 const Header = () => {
-  const [{ data: connectData, loading: connectLoading }, connect] =
-    useConnect();
+  const [{ data: connectData }, connect] = useConnect();
   const [{ data: accountData }, disconnect] = useAccount({ fetchEns: true });
 
   return (
@@ -37,7 +36,6 @@ const Header = () => {
           w={["full", "auto"]}
           mt={[5, 0]}
           onClick={() => connect(connectData.connectors[0])}
-          disabled={connectLoading}
         >
           Connect
         </Button>
