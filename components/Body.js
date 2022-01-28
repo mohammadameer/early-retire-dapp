@@ -73,11 +73,17 @@ const Body = ({ contract }) => {
       alignItems="center"
       justifyContent="center"
     >
-      <Text fontSize="4xl" fontWeight="bold" mt={40}>
+      <Text fontSize="4xl" fontWeight="bold" textAlign="center" mt={40}>
         Earn 0.50% Daily Forever
       </Text>
 
-      <Box display="flex" mt={20}>
+      <Box
+        display="flex"
+        flexDir={["column", "row"]}
+        justifyContent="center"
+        mt={20}
+        flexWrap="wrap"
+      >
         <Input
           mr={5}
           p={10}
@@ -86,14 +92,26 @@ const Body = ({ contract }) => {
           value={amount}
           disabled={loading}
           onChange={(e) => setAmount(e.target.value)}
+          w={["full", "auto"]}
         />
-        <Button fontSize="xl" isLoading={loading} p={10} onClick={invest}>
+        <Button
+          fontSize="xl"
+          isLoading={loading}
+          p={10}
+          onClick={invest}
+          w={["full", "auto"]}
+          mt={[5, 0]}
+        >
           Invest
         </Button>
       </Box>
 
       <Box display="flex" flexWrap="wrap" mt={20} w="full">
-        <Box w="20%" p={5} opacity={loading ? "0.2" : "1"}>
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
           <Box
             p={5}
             w="full"
@@ -121,7 +139,11 @@ const Body = ({ contract }) => {
           </Box>
         </Box>
 
-        <Box w="20%" p={5} opacity={loading ? "0.2" : "1"}>
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
           <Box
             p={5}
             w="full"
@@ -140,7 +162,11 @@ const Body = ({ contract }) => {
           </Box>
         </Box>
 
-        <Box w="20%" p={5} opacity={loading ? "0.2" : "1"}>
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
           <Box
             p={5}
             w="full"
@@ -160,7 +186,11 @@ const Body = ({ contract }) => {
           </Box>
         </Box>
 
-        <Box w="20%" p={5} opacity={loading ? "0.2" : "1"}>
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
           <Box
             p={5}
             w="full"
@@ -175,7 +205,11 @@ const Body = ({ contract }) => {
           </Box>
         </Box>
 
-        <Box w="20%" p={5} opacity={loading ? "0.2" : "1"}>
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
           <Box
             p={5}
             w="full"

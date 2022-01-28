@@ -8,12 +8,23 @@ const Header = () => {
   const [{ data: accountData }, disconnect] = useAccount({ fetchEns: true });
 
   return (
-    <Box px={10} paddingTop={5} display="flex" justifyContent="space-between">
+    <Box
+      px={10}
+      paddingTop={5}
+      display="flex"
+      flexDir={["column", "row"]}
+      justifyContent="space-between"
+    >
       <Text fontSize="2xl" fontWeight="bold">
         Early Retire Dapp
       </Text>
       {accountData ? (
-        <Button rightIcon={<SignOutIcon />} onClick={disconnect}>
+        <Button
+          w={["full", "auto"]}
+          mt={[5, 0]}
+          rightIcon={<SignOutIcon />}
+          onClick={disconnect}
+        >
           {accountData.ens
             ? accountData.ens
             : `${accountData.address.slice(0, 6)}...${accountData.address.slice(
@@ -23,6 +34,8 @@ const Header = () => {
         </Button>
       ) : (
         <Button
+          w={["full", "auto"]}
+          mt={[5, 0]}
           onClick={() => connect(connectData.connectors[0])}
           disabled={connectLoading}
         >
