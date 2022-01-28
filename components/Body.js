@@ -73,6 +73,27 @@ const Body = ({ contract }) => {
       alignItems="center"
       justifyContent="center"
     >
+      <Box display="flex" flexWrap="wrap" mt={20} w="full">
+        <Box
+          w={["100%", "50%", "50%", "20%"]}
+          p={5}
+          opacity={loading ? "0.2" : "1"}
+        >
+          <Box
+            p={5}
+            w="full"
+            bg="gray.200"
+            borderRadius="2xl"
+            borderWidth={2}
+            borderColor="blackAlpha.600"
+            mr={20}
+          >
+            <Text fontSize="xl">All Investments</Text>
+            <Text>{allInvestments}</Text>
+          </Box>
+        </Box>
+      </Box>
+
       <Text fontSize="4xl" fontWeight="bold" textAlign="center" mt={40}>
         Earn 0.50% Daily Forever
       </Text>
@@ -183,25 +204,6 @@ const Body = ({ contract }) => {
                 Withdraw
               </Button>
             ) : null}
-          </Box>
-        </Box>
-
-        <Box
-          w={["100%", "50%", "50%", "20%"]}
-          p={5}
-          opacity={loading ? "0.2" : "1"}
-        >
-          <Box
-            p={5}
-            w="full"
-            bg="gray.200"
-            borderRadius="2xl"
-            borderWidth={2}
-            borderColor="blackAlpha.600"
-            mr={20}
-          >
-            <Text fontSize="xl">All Investments</Text>
-            <Text>{allInvestments}</Text>
           </Box>
         </Box>
 
